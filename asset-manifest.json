@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/http//longboi-nekoshka.github.io/Adam/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/http//longboi-nekoshka.github.io/Adam/static/js/main.865d7604.chunk.js",
+    "main.js.map": "/http//longboi-nekoshka.github.io/Adam/static/js/main.865d7604.chunk.js.map",
+    "runtime-main.js": "/http//longboi-nekoshka.github.io/Adam/static/js/runtime-main.1a85f5b5.js",
+    "runtime-main.js.map": "/http//longboi-nekoshka.github.io/Adam/static/js/runtime-main.1a85f5b5.js.map",
+    "static/js/2.bfac0bbb.chunk.js": "/http//longboi-nekoshka.github.io/Adam/static/js/2.bfac0bbb.chunk.js",
+    "static/js/2.bfac0bbb.chunk.js.map": "/http//longboi-nekoshka.github.io/Adam/static/js/2.bfac0bbb.chunk.js.map",
+    "static/js/3.a997bc41.chunk.js": "/http//longboi-nekoshka.github.io/Adam/static/js/3.a997bc41.chunk.js",
+    "static/js/3.a997bc41.chunk.js.map": "/http//longboi-nekoshka.github.io/Adam/static/js/3.a997bc41.chunk.js.map",
+    "index.html": "/http//longboi-nekoshka.github.io/Adam/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/http//longboi-nekoshka.github.io/Adam/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.bfac0bbb.chunk.js.LICENSE.txt": "/http//longboi-nekoshka.github.io/Adam/static/js/2.bfac0bbb.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/http//longboi-nekoshka.github.io/Adam/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a85f5b5.js",
+    "static/js/2.bfac0bbb.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.865d7604.chunk.js"
+  ]
+}
