@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography, Card, CardContent, Chip} from "@material-ui/core";
 import data from '../data/technologies.json';
@@ -7,9 +7,6 @@ import { map } from 'lodash';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-  },
-  media: {
-    height: 140,
   },
 });
 

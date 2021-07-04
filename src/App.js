@@ -1,9 +1,10 @@
 import React,{Fragment} from "react";
-import { Grid, Typography, Box, Grow, Avatar } from "@material-ui/core";
+import { Grid, Typography, Box, Grow, Avatar, Divider } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import SocialComponent from "./components/SocialComponent";
 import TechnologiesComponent from "./components/TechnologiesComponent";
 import ProjectComponent from "./components/ProjectComponent";
+import PersonalInfo from "./components/PersonalInfo";
 import data from "./data/personalInfo.json";
 
 const useStyles = makeStyles((theme) => ({
@@ -44,7 +45,7 @@ function App() {
             </Grow>
           </Grid>
           <TechnologiesComponent/>
-          <Grid item xs={6}>
+          <Grid item xs={12}>
             <Grow 
               in={true} 
               direction='left'
@@ -56,6 +57,12 @@ function App() {
             </Grow>
           </Grid>
           <ProjectComponent/>
+          <Grid item xs={12}>
+            <Divider/>
+              <Typography variant='h4'> Skills </Typography>
+            <Divider/>
+          </Grid>
+          <PersonalInfo/>
         </Grid>
       </Box>
     </Fragment>
