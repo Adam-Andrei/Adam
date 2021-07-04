@@ -1,7 +1,19 @@
 import React,{Fragment} from "react";
-import { Grid, Typography, Box, Slide, Grow, Avatar } from "@material-ui/core";
+import { Grid, Typography, Box, Grow, Avatar } from "@material-ui/core";
+import { makeStyles } from '@material-ui/core/styles';
+import SocialComponent from "./components/SocialComponent";
+import TechnologiesComponent from "./components/TechnologiesComponent";
+
+const useStyles = makeStyles((theme) => ({
+  large: {
+    width: theme.spacing(16),
+    height: theme.spacing(16),
+  },
+}));
 
 function App() {
+  const classes = useStyles();
+
   return (
     <Fragment>
       <Box mt={4}>
@@ -10,68 +22,37 @@ function App() {
           direction='column' 
           alignItems='center' 
           justify='center'
-          spacing={4}
+          spacing={3}
         >
-          <Grid item>
-            <Grow
-              in={true}
-              style={{ transformOrigin: '0 0 0' }}
-              {...(true ? { timeout: 1000 } : {})}
-            >
-              <Avatar src={'https://bit.ly/3xkYahG'}/>
-            </Grow>
+          <Grid container item xs={12} justify='center' direction='column' alignItems='center' spacing={2}>
+            <Grid item>
+              <Avatar src={'https://bit.ly/3jHhCRC'} className={classes.large}/>
+            </Grid>
+            <SocialComponent/>
           </Grid>
-          <Grid item xs={6}>
-            <Slide 
+          <Grid item xs={5}>
+            <Grow 
               in={true} 
               direction='right'
               {...(true ? {timeout:1000} : {})}
             >
               <Typography variant='body2'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Curabitur lacinia tristique lorem a feugiat. 
-                Nullam pharetra, leo et tristique tincidunt, 
-                nunc turpis imperdiet est, non commodo augue odio 
-                sit amet nunc. Nam a neque euismod, commodo est ac, 
-                iaculis diam. Integer vitae auctor quam. Praesent urna sem,
-                sollicitudin id tellus et, lobortis lacinia ante. 
-                Etiam vel porttitor purus. Vivamus convallis cursus ipsum nec placerat. 
-                Curabitur cursus metus et dui ullamcorper fringilla vel eu tellus. 
-                Vestibulum in iaculis lorem. Nullam et lobortis quam, 
-                vitae varius ex. Donec vel erat egestas, blandit risus in,
-                feugiat sem. Suspendisse at aliquam urna. 
-                Quisque rhoncus dui a lacus tincidunt efficitur. 
-                Sed nisi elit, pulvinar vel tristique a, maximus a lacus. 
-                Cras non est sed dui dapibus mollis. 
-                Vestibulum nec finibus ex.
+                Hi I'm Adam Andrei Sobremonte and I'm a web developer. I have an
+                experience using react, laravel and other technologies.
               </Typography>
-            </Slide>
+            </Grow>
           </Grid>
+          <TechnologiesComponent/>
           <Grid item xs={6}>
-            <Slide 
+            <Grow 
               in={true} 
               direction='left'
               {...(true ? {timeout:1000} : {})}
             >
               <Typography variant='body2'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Curabitur lacinia tristique lorem a feugiat. 
-                Nullam pharetra, leo et tristique tincidunt, 
-                nunc turpis imperdiet est, non commodo augue odio 
-                sit amet nunc. Nam a neque euismod, commodo est ac, 
-                iaculis diam. Integer vitae auctor quam. Praesent urna sem,
-                sollicitudin id tellus et, lobortis lacinia ante. 
-                Etiam vel porttitor purus. Vivamus convallis cursus ipsum nec placerat. 
-                Curabitur cursus metus et dui ullamcorper fringilla vel eu tellus. 
-                Vestibulum in iaculis lorem. Nullam et lobortis quam, 
-                vitae varius ex. Donec vel erat egestas, blandit risus in,
-                feugiat sem. Suspendisse at aliquam urna. 
-                Quisque rhoncus dui a lacus tincidunt efficitur. 
-                Sed nisi elit, pulvinar vel tristique a, maximus a lacus. 
-                Cras non est sed dui dapibus mollis. 
-                Vestibulum nec finibus ex.
+                Projects that I made or help making
               </Typography>
-            </Slide>
+            </Grow>
           </Grid>
         </Grid>
       </Box>
