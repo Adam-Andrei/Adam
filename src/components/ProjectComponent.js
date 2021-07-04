@@ -26,7 +26,7 @@ const ProjectComponent = () => {
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">{index.name}</Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
-                    Technologies
+                    Technologies Used
                   </Typography>
                   <Grid container spacing={2}>
                   {
