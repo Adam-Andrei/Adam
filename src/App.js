@@ -3,6 +3,7 @@ import { Grid, Typography, Box, Grow, Avatar } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import SocialComponent from "./components/SocialComponent";
 import TechnologiesComponent from "./components/TechnologiesComponent";
+import ProjectComponent from "./components/ProjectComponent";
 
 const useStyles = makeStyles((theme) => ({
   large: {
@@ -14,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
 
-  return (
+  return (  
     <Fragment>
       <Box mt={4}>
         <Grid 
@@ -50,10 +51,11 @@ function App() {
               {...(true ? {timeout:1000} : {})}
             >
               <Typography variant='body2'>
-                Projects that I made or help making
+                Projects that I made or helped making.
               </Typography>
             </Grow>
           </Grid>
+          <ProjectComponent/>
         </Grid>
       </Box>
     </Fragment>

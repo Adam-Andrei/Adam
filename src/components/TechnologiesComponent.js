@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from "react";
-import { Grid, IconButton, Avatar } from "@material-ui/core";
+import { Grid, IconButton, Avatar, Grow } from "@material-ui/core";
 import data from '../data/technologies.json';
 import { map } from 'lodash';
 
@@ -24,9 +24,15 @@ const TechnologiesComponent = () => {
         map(tech, (item, key) => {
           return (
             <Grid item key={key}>
+              <Grow 
+                in={true} 
+                direction='right'
+                {...(true ? {timeout:1000} : {})}
+              >
               <IconButton size='small' onClick={()=>toUrl(item.url)}>
                 <Avatar src={item.icon}/>
               </IconButton>
+              </Grow>
             </Grid>
           );
         })

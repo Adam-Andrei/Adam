@@ -35,5 +35,32 @@
       "icon":"https://img.icons8.com/color/48/000000/nodejs.png",
       "url":"https://nodejs.org/"
     }
+  ],
+  "projects":[
+    {
+      "name":"NMS Accounts",
+      "technologies":[
+        "react",
+        "laravel",
+        "mariadb"
+      ]
+    },
+    {
+      "name":"NMS HR",
+      "technologies":[
+        "react",
+        "laravel",
+        "mariadb"
+      ]
+    },
+    {
+      "name":"NMS Moderation",
+      "technologies":[
+        "react",
+        "laravel",
+        "mariadb",
+        "node"
+      ]
+    }
   ]
 }
