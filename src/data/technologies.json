@@ -42,7 +42,8 @@
       "technologies":[
         "react",
         "laravel",
-        "mariadb"
+        "mariadb",
+        "redis"
       ]
     },
     {
@@ -51,7 +52,8 @@
         "react",
         "laravel",
         "mariadb",
-        "redis"
+        "redis",
+        "docker"
       ]
     },
     {
