@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import SocialComponent from "./components/SocialComponent";
 import TechnologiesComponent from "./components/TechnologiesComponent";
 import ProjectComponent from "./components/ProjectComponent";
+import data from "./data/personalInfo.json";
 
 const useStyles = makeStyles((theme) => ({
   large: {
@@ -38,8 +39,7 @@ function App() {
               {...(true ? {timeout:1000} : {})}
             >
               <Typography variant='body2'>
-                Hi I'm Adam Andrei Sobremonte and I'm a web developer. I have an
-                experience using react, laravel and other technologies.
+                {data.header.setting}
               </Typography>
             </Grow>
           </Grid>
