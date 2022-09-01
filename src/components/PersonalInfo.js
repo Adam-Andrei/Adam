@@ -1,47 +1,50 @@
-import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography, Card, CardContent, Button} from "@material-ui/core";
-import data from '../data/personalInfo.json';
-import { map } from 'lodash';
-
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
-});
+import { Avatar, Box, Tooltip, Typography } from "@mui/material";
+import { Stack } from "@mui/system";
+import { useEffect } from "react";
+import personal from "../data/personalInfo.json"
+import technical from "../data/technologies.json"
+import SocialComponent from "./SocialComponent";
 
 const PersonalInfo = () => {
-  const classes = useStyles();
+
+  useEffect(() => {
+    console.log(window.location.origin)
+  },[])
 
   return (
-    <Grid item container xs={6} spacing={2} container spacing={1}>
-      {
-        map(data.skills,(index, key) => {
-          return (
-            <>
-              <Grid item xs={6} key={key}>
-                <Card className={classes.root}>
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">{index.say}</Typography>
-                    <Grid item container xs={12} spacing={4}>
-                    {
-                      map(index.tools,(indexes,keys) => {
-                        return (
-                            <Grid item xs={4} key={keys}>
-                              <Button variant='outlined'>{indexes}</Button>
-                            </Grid>
-                        )
-                      })
-                    }
-                    </Grid>
-                  </CardContent>
-                </Card>
-              </Grid>
-            </>
-          )
-        })
-      }
-    </Grid>
+    <Box sx={{mt:5}}>
+      <Stack spacing={1} direction="column" justifyContent='center' alignItems='center'>
+        <Stack spacing={1} direction="row">
+          <Avatar src={process.env.PUBLIC_URL+'/image/DP.jpg'} sx={{ width: 56, height: 56 }}/>
+          <Typography variant="body2" sx={{width:700}}>
+            {
+              personal.header.setting
+            }
+          </Typography>
+        </Stack>
+        <SocialComponent/>
+        <Box border="1px solid #F6F6F6" p={2} borderRadius={5}>
+          <Stack spacing={2} direction="column" justifyItems='center' alignItems='center'>
+            <Typography>
+              <strong>
+                Technologies that I commonly used
+              </strong>
+            </Typography>
+            <Stack spacing={1} direction="row" >
+              {
+                technical.technology.map((data) => {
+                  return (
+                    <Tooltip title={data.name}>
+                      <Avatar src={data.icon}/>
+                    </Tooltip>
+                  )
+                })
+              }
+            </Stack>
+          </Stack>
+        </Box>
+      </Stack>
+    </Box>
   );
 };
 

@@ -39,6 +39,8 @@
   "projects":[
     {
       "name":"NMS Accounts",
+      "description":"NMS accounts is an auth system that used by the NMSAPPS platforms",
+      "img":["NMSAPPS_Accounts.png"],
       "technologies":[
         "react",
         "laravel",
@@ -47,7 +49,30 @@
       ]
     },
     {
+      "name":"NMS Logging",
+      "description":"NMS logging is a logging system that used by the NMSAPPS platforms to log user activity",
+      "img":["NMSAPPS_Logging.png","NMSAPPS_Loggingv2.png"],
+      "technologies":[
+        "react",
+        "laravel",
+        "mariadb",
+        "redis"
+      ]
+    },
+    {
+      "name":"NMS Finance Dashboard",
+      "description":"This project is not mine but I do maintain it. The project is used to see the company earnings.",
+      "img":["NMSAPPS_FDB.png"],
+      "technologies":[
+        "react",
+        "redis",
+        "nest js"
+      ]
+    },
+    {
       "name":"NMS HR",
+      "description":"NMS HR is a HR system consisting announcement, memo, notification and more this project is also where I became a project lead",
+      "img":["NMSAPPS_HR.png","NMSAPPSHR.png"],
       "technologies":[
         "react",
         "laravel",
@@ -58,6 +83,8 @@
     },
     {
       "name":"NMS Moderation",
+      "description":"NMS Moderation content moderation.",
+      "img":["moderationPic.png","moderationV2.png"],
       "technologies":[
         "react",
         "laravel",

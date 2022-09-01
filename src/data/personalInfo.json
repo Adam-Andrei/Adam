@@ -1,35 +1,33 @@
 {
     "header":{
-        "setting":"Hi I'm Adam Andrei Sobremonte and I'm a web developer. I went to Saint Louis University in 2015 and graduated in 2020. Currently I'm working at New Media Services and there I have an experienced using react, laravel and other technologies."
+        "setting":"Hi I'm Adam Andrei Sobremonte and I'm a web developer. I went to Saint Louis University in 2015 and graduated in 2020. Currently I'm working at New Media Services though I'm finding new opportunities in improving my skills."
     },
     "skills":[
         {
             "say":"I mostly use",
             "tools":[
                 "React",
-                "Laravel"
+                "Laravel",
+                "Node js",
+                "Nest js"
             ]
         },
         {
-            "say":"But I'm currently learning or refreshing in these technologies",
+            "say":"I'm currently Improving or re-learning these technologies",
             "tools":[
                 "Redis",
                 "Docker",
                 "MongoDB",
                 "Nodejs",
-                "C#",
-                "Unity",
-                "Laravel 8"
+                "Laravel 9"
             ]
         },
         {
-            "say":"I use this technology but yeah... it's been so long that I nearly forget how to use it",
+            "say":"I use this technology but yeah... it's been a long time since I use this technologies",
             "tools":[
                 "Unity",
                 "C#",
-                "Pug js",
-                "Nodejs",
-                "Node Express"
+                "Pug js"
             ]
         }
     ]

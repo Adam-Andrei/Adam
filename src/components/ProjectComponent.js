@@ -1,52 +1,86 @@
-import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography, Card, CardContent, Chip} from "@material-ui/core";
-import data from '../data/technologies.json';
-import { map } from 'lodash';
-
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
-});
+import { Button, Card, CardActionArea, CardContent, CardHeader, CardMedia, Dialog, DialogActions, DialogContent, IconButton, Stack, Typography } from "@mui/material";
+import technical from "../data/technologies.json";
+import { useState } from "react";
+import { NavigateBefore, NavigateNext } from "@mui/icons-material";
 
 const ProjectComponent = () => {
-  const classes = useStyles();
-
+  const [ rotation, setRotation ] = useState(0);
+  const [ openDialog, setOpenDialog ] = useState(false);
+  const [ dialogImageCounter, setDialogImageCounter] = useState(0)
   return (
-    <Grid  item container xs={5} spacing={2}>
-      {
-        map(data.projects, (index,key) => {
-          return (
-            <Grid item xs={6} key={key}>
-              <Card className={classes.root}>
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">{index.name}</Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    Technologies Used
-                  </Typography>
-                  <Grid container spacing={2}>
-                  {
-                    map(index.technologies,(indexes,keys) => {
-                      console.log(indexes);
-                      return (
-                        <Grid item xs={4} key={keys}>
-                          <Chip
-                              label={indexes}
-                              clickable
-                          />
-                        </Grid>
-                      )
-                    })
-                  }
-                  </Grid>
-                </CardContent>
-              </Card>
-            </Grid>
-          );
-        })
-      }
-    </Grid>
+    <Stack spacing={1} justifyContent='center' alignItems='center'>
+      <Typography variant="h5">Projects that I made or part of</Typography>
+      <Stack spacing={1} justifyContent='center' alignItems='center' direction='row'>
+        <Dialog 
+          open={openDialog}
+          onClose={() => {
+            setOpenDialog(false)
+          }}
+          fullScreen
+        >
+          <DialogContent>
+            <Stack spacing={1} direction='row'>
+              <img width="100%" src={process.env.PUBLIC_URL+'/image/'+technical.projects[rotation].img[dialogImageCounter]}/>
+            </Stack>
+          </DialogContent>
+          <DialogActions>
+            <Button
+              variant="outlined"
+              onClick={() => setDialogImageCounter((prev) => prev-=1)}
+              disabled={dialogImageCounter === 0}
+            >
+              Back
+            </Button>
+            <Button
+              variant="outlined"
+              onClick={() => setDialogImageCounter((prev) => prev+=1)}
+              disabled={dialogImageCounter === technical.projects[rotation].img.length -1}
+            >
+              Next
+            </Button>
+            <Button
+              color='secondary'
+              variant="contained"
+              onClick={()=>{
+                setDialogImageCounter(0);
+                setOpenDialog(false);
+              }}
+            >
+              Close
+            </Button>
+          </DialogActions>
+        </Dialog>
+        <IconButton 
+          onClick={() => setRotation((prev) => (prev-=1))}
+          disabled={rotation === 0 ? true : false}
+        >
+          <NavigateBefore/>
+        </IconButton>
+        <Card sx={{ width: 345, height:345 }}>
+            <CardHeader title={technical.projects[rotation].name}/>
+            <CardActionArea onClick={() => setOpenDialog(true)}>
+              <CardMedia
+                component="img"
+                height="140"
+                image={process.env.PUBLIC_URL+'/image/'+technical.projects[rotation].img[0]}
+              />
+            </CardActionArea>
+            <CardContent>
+              <Typography>
+                {
+                  technical.projects[rotation].description
+                }
+              </Typography>
+            </CardContent>
+        </Card>
+        <IconButton
+          onClick={() => setRotation((prev) => (prev+=1))}
+          disabled={rotation === technical.projects.length - 1 ? true : false}
+        >
+          <NavigateNext/>
+        </IconButton>
+      </Stack>
+    </Stack>
   );
 };
 
