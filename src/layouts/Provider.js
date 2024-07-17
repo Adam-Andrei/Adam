@@ -16,7 +16,15 @@ export const Provider = (props) => {
     }),
     [],
   );
+
   const theme = useMemo(() => createTheme({
+    components: {
+      MuiButtonBase: {
+        defaultProps: {
+          disableRipple: true,
+        }
+      },
+    },
     palette: {
       mode,
       ...(mode === 'light' ? {
@@ -34,7 +42,7 @@ export const Provider = (props) => {
           main: amber[500]
         }
       })
-    }
+    },
   }),[mode])
 
   return (

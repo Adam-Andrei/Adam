@@ -31,9 +31,59 @@
       "url":"https://mariadb.org/"
     },
     {
-      "name":"Nodejs",
-      "icon":"https://img.icons8.com/color/48/000000/nodejs.png",
-      "url":"https://nodejs.org/"
+      "name":"Go language",
+      "icon":"https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Aqua.svg",
+      "url":"https://go.dev/"
+    },
+    {
+      "name":"Go Gin",
+      "icon":"https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Aqua.svg",
+      "url":"https://go.dev/"
+    },
+    {
+      "name":"Go Fiber",
+      "icon":"https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Aqua.svg",
+      "url":"https://go.dev/"
+    },
+    {
+      "name":"GCP Cloud SQL",
+      "icon":"https://www.gstatic.com/bricks/image/99f8f264-fc48-4595-ba23-ac26ad79ecf5.svg",
+      "url":"https://cloud.google.com/products/databases"
+    },
+    {
+      "name":"GCP Bigtable",
+      "icon":"https://www.gstatic.com/bricks/image/99f8f264-fc48-4595-ba23-ac26ad79ecf5.svg",
+      "url":"https://cloud.google.com/products/databases"
+    },
+    {
+      "name":"GCP Spanner",
+      "icon":"https://www.gstatic.com/bricks/image/99f8f264-fc48-4595-ba23-ac26ad79ecf5.svg",
+      "url":"https://cloud.google.com/products/databases"
+    },
+    {
+      "name":"GCP Firebase",
+      "icon":"https://www.gstatic.com/bricks/image/41cc97638ac0729efdcbe1b9c1fc2f02db93bab0023f082f00b885995dce2560.svg",
+      "url":"https://cloud.google.com/products/databases"
+    },
+    {
+      "name":"Supabase",
+      "icon":"https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/299/square_480/supabase-logo-icon_1.png",
+      "url":"https://supabase.com/"
+    },
+    {
+      "name":"Vercel",
+      "icon":"https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
+      "url":"https://vercel.com"
+    },
+    {
+      "name":"Python",
+      "icon":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BF8l33vU2D0uFaqtdV5ullV7adyOIoRtLw&s",
+      "url":"https://vercel.com"
+    },
+    {
+      "name":"React Native",
+      "icon":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+      "url":"https://vercel.com"
     }
   ],
   "projects":[
@@ -90,6 +140,102 @@
         "laravel",
         "mariadb",
         "node"
+      ]
+    },
+    {
+      "name":"SariSukiBackend",
+      "description":"It is an online grocery where the rider delivers the grocery directly infront of your door within the day.",
+      "img":["sarisukibackend.png"],
+      "technologies":[
+        "GraphQL",
+        "Nest js ",
+        "mongodb",
+        "docker",
+        "postgreSQL",
+        "socket IO"
+      ]
+    },
+    {
+      "name":"Go Language Study",
+      "description":"It's an study group provided by the company to learn Go language and its framework.",
+      "img":["GoLang.png"],
+      "technologies":[
+        "GO Gin",
+        "Socket IO",
+        "GO Fiber"
+      ]
+    },
+    {
+      "name":"GCP Study",
+      "description":"It's an study group provided by the company to learn GCP.",
+      "img":["google-cloud-icon-2048x1646-7admxejz.png"],
+      "technologies":[
+        "GCP Database (cloudSQL, cloudSpanner, cloudBigtables)",
+        "GCP Network",
+        "GCP Firebase",
+        "GCP Buckets",
+        "GCP service account management",
+        "Cloud Billing",
+        "Cloud IAM",
+        "GCP Compute Engine"
+      ]
+    }, 
+    {
+      "name":"Metrobank Datastage",
+      "description":"It's a Data formatter/migration software used to process bank data",
+      "img":[""],
+      "technologies":[
+        "Datastage",
+        "Others"
+      ]
+    },
+    {
+      "name":"Metrobank Biller Creation / Validation",
+      "description":"It's a landing page for banks creation of clients",
+      "img":[""],
+      "technologies":[
+        "React",
+        "Yup Validation",
+        "Others"
+      ]
+    },
+    {
+      "name":"Supabase, Nest js or Remix JS",
+      "description":"It's an study group provided by the company to learn Next or Remix using supabase as the backend",
+      "img":["supabase.png","supabase2.png","supabase3.png","supabase4.png"],
+      "technologies":[
+        "Next js",
+        "Remix js",
+        "Supabase"
+      ]
+    },
+    {
+      "name":"Hospital App (Partime Programmer)",
+      "description":"This app is a portal system to a hospital and keeps the record of the patient.",
+      "img":[""],
+      "technologies":[
+        "React native",
+        "Socket IO", 
+        "next js" ,
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name":"Hospital App - rtc  (Partime Programmer)",
+      "description":"This app is used for the hospital app to communicate with patients.",
+      "img":[""],
+      "technologies":[
+        "React native",
+        "RTC"
+      ]
+    },
+    {
+      "name":"Hospital App - KNN ML",
+      "description":"This machine learning will be trained on the hospital data",
+      "img":[""],
+      "technologies":[
+        "Python",
+        "Others"
       ]
     }
   ]

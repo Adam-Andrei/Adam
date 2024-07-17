@@ -5,7 +5,6 @@ import ThemeChanger from "./components/ThemeChanger";
 import { Provider } from './layouts/Provider';
 import Parent  from './layouts/Parent';
 import ProjectComponent from "./components/ProjectComponent";
-import SocialComponent from "./components/SocialComponent";
 import Improving from "./components/Imporving";
 
 function App() {

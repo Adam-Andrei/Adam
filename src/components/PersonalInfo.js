@@ -1,4 +1,4 @@
-import { Avatar, Box, Tooltip, Typography } from "@mui/material";
+import { Avatar, Box, Tooltip, Typography,AvatarGroup } from "@mui/material";
 import { Stack } from "@mui/system";
 import { useEffect } from "react";
 import personal from "../data/personalInfo.json"
@@ -27,20 +27,25 @@ const PersonalInfo = () => {
           <Stack spacing={2} direction="column" justifyItems='center' alignItems='center'>
             <Typography>
               <strong>
-                Technologies that I commonly used
+                Technologies that I experience using
               </strong>
             </Typography>
-            <Stack spacing={1} direction="row" >
-              {
-                technical.technology.map((data) => {
-                  return (
-                    <Tooltip title={data.name}>
-                      <Avatar src={data.icon}/>
-                    </Tooltip>
-                  )
-                })
-              }
-            </Stack>
+            <Box display="flex" alignItems="center" style={{
+              overflowX: "hidden",
+              
+            }}>
+
+             
+                {
+                  technical.technology.map((data) => {
+                    return (
+                      <Tooltip title={data.name}>
+                        <Avatar src={data.icon}/>
+                      </Tooltip>
+                    )
+                  })
+                }
+            </Box>
           </Stack>
         </Box>
       </Stack>

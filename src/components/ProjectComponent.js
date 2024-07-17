@@ -1,12 +1,25 @@
-import { Button, Card, CardActionArea, CardContent, CardHeader, CardMedia, Dialog, DialogActions, DialogContent, IconButton, Stack, Typography } from "@mui/material";
+import { Button, Card, CardActionArea, CardContent, CardHeader, CardMedia, Dialog, DialogActions, DialogContent, IconButton, Stack, Typography,Tooltip,Box } from "@mui/material";
 import technical from "../data/technologies.json";
 import { useState } from "react";
 import { NavigateBefore, NavigateNext } from "@mui/icons-material";
+import { styled } from '@mui/material/styles';
+import { tooltipClasses } from '@mui/material/Tooltip';
 
 const ProjectComponent = () => {
   const [ rotation, setRotation ] = useState(0);
   const [ openDialog, setOpenDialog ] = useState(false);
   const [ dialogImageCounter, setDialogImageCounter] = useState(0)
+
+  const HtmlTooltip = styled(({ className, ...props }) => (
+    <Tooltip {...props} classes={{ popper: className }}/>
+  ))(({ theme }) => ({
+    [`& .${tooltipClasses.tooltip}`]: {
+      backgroundColor: theme,
+      color: theme,
+      maxWidth: 220,
+    },
+  }));
+
   return (
     <Stack spacing={1} justifyContent='center' alignItems='center'>
       <Typography variant="h5">Projects that I made or part of</Typography>
@@ -20,7 +33,7 @@ const ProjectComponent = () => {
         >
           <DialogContent>
             <Stack spacing={1} direction='row'>
-              <img width="100%" src={process.env.PUBLIC_URL+'/image/'+technical.projects[rotation].img[dialogImageCounter]}/>
+              <img width="100%" src={process.env.PUBLIC_URL+'/image/'+(technical.projects[rotation].img[dialogImageCounter] === "" ? "noImage.jpg" : technical.projects[rotation].img[dialogImageCounter])}/>
             </Stack>
           </DialogContent>
           <DialogActions>
@@ -57,12 +70,36 @@ const ProjectComponent = () => {
           <NavigateBefore/>
         </IconButton>
         <Card sx={{ width: 345, height:345 }}>
-            <CardHeader title={technical.projects[rotation].name}/>
+            <HtmlTooltip title={
+
+              <>
+              <Typography variant={"subtitle1"} gutterbottom>
+                Project Tech Stack
+              </Typography>
+              <Typography variant={"subtitle2"} gutterbottom>
+              {
+                technical.projects[rotation].technologies.map((element,i,total) => {
+                  return(
+                      <>
+                      {
+                        console.log(total.length,i)
+                      }
+                        {i+1 === total.length ? element : element+ ", "}
+                      </>
+                    )
+                  })
+                }
+              </Typography>
+              </>
+
+            } placement={"right"}>
+              <CardHeader title={technical.projects[rotation].name}/>
+            </HtmlTooltip>
             <CardActionArea onClick={() => setOpenDialog(true)}>
               <CardMedia
                 component="img"
                 height="140"
-                image={process.env.PUBLIC_URL+'/image/'+technical.projects[rotation].img[0]}
+                image={process.env.PUBLIC_URL+'/image/'+(technical.projects[rotation].img[0] === "" ? "noImage.jpg" : technical.projects[rotation].img[0])}
               />
             </CardActionArea>
             <CardContent>
