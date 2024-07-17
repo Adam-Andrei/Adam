@@ -241,7 +241,7 @@
     {
       "name":"Unpublish Game",
       "description":"Hobby",
-      "img":["Game.MP4"],
+      "img":["Game.png,Game2.png,Game3.png,Game.MP4"],
       "technologies":[
         "Unity",
         "C#"
