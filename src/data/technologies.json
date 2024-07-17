@@ -230,12 +230,21 @@
       ]
     },
     {
-      "name":"Hospital App - KNN ML",
+      "name":"Hospital App - KNN ML (Partime Programmer)",
       "description":"This machine learning will be trained on the hospital data",
       "img":[""],
       "technologies":[
         "Python",
         "Others"
+      ]
+    },
+    {
+      "name":"Unpublish Game",
+      "description":"Hobby",
+      "img":["Game.MP4"],
+      "technologies":[
+        "Unity",
+        "C#"
       ]
     }
   ]

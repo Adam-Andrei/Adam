@@ -7,10 +7,6 @@ import SocialComponent from "./SocialComponent";
 
 const PersonalInfo = () => {
 
-  useEffect(() => {
-    console.log(window.location.origin)
-  },[])
-
   return (
     <Box sx={{mt:5}}>
       <Stack spacing={1} direction="column" justifyContent='center' alignItems='center'>
@@ -34,8 +30,6 @@ const PersonalInfo = () => {
               overflowX: "hidden",
               
             }}>
-
-             
                 {
                   technical.technology.map((data) => {
                     return (

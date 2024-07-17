@@ -1,4 +1,4 @@
-import { Button, Card, CardActionArea, CardContent, CardHeader, CardMedia, Dialog, DialogActions, DialogContent, IconButton, Stack, Typography,Tooltip,Box } from "@mui/material";
+import { Button, Card, CardActionArea, CardContent, CardHeader, CardMedia, Dialog, DialogActions, DialogContent, IconButton, Stack, Typography,Tooltip } from "@mui/material";
 import technical from "../data/technologies.json";
 import { useState } from "react";
 import { NavigateBefore, NavigateNext } from "@mui/icons-material";
@@ -33,7 +33,15 @@ const ProjectComponent = () => {
         >
           <DialogContent>
             <Stack spacing={1} direction='row'>
-              <img width="100%" src={process.env.PUBLIC_URL+'/image/'+(technical.projects[rotation].img[dialogImageCounter] === "" ? "noImage.jpg" : technical.projects[rotation].img[dialogImageCounter])}/>
+              {
+                technical.projects[rotation].img[dialogImageCounter].slice(-1) === "4" ? 
+                <video width={900} height={450} controls>
+                  <source src={process.env.PUBLIC_URL+'/image/'+technical.projects[rotation].img[dialogImageCounter]}/>
+                </video>
+                :
+                <img alt={technical.projects[rotation].name} width="100%" src={process.env.PUBLIC_URL+'/image/'+(technical.projects[rotation].img[dialogImageCounter] === "" ? "noImage.jpg" : technical.projects[rotation].img[dialogImageCounter])}/>
+              }
+              
             </Stack>
           </DialogContent>
           <DialogActions>
@@ -81,9 +89,6 @@ const ProjectComponent = () => {
                 technical.projects[rotation].technologies.map((element,i,total) => {
                   return(
                       <>
-                      {
-                        console.log(total.length,i)
-                      }
                         {i+1 === total.length ? element : element+ ", "}
                       </>
                     )
@@ -97,9 +102,11 @@ const ProjectComponent = () => {
             </HtmlTooltip>
             <CardActionArea onClick={() => setOpenDialog(true)}>
               <CardMedia
-                component="img"
+                component={technical.projects[rotation].img[0].slice(-1) === "4"? "video" : "img"}
                 height="140"
-                image={process.env.PUBLIC_URL+'/image/'+(technical.projects[rotation].img[0] === "" ? "noImage.jpg" : technical.projects[rotation].img[0])}
+                // image={process.env.PUBLIC_URL+'/image/'+(technical.projects[rotation].img[0] === "" ? "noImage.jpg" : technical.projects[rotation].img[0])}
+                src={process.env.PUBLIC_URL+'/image/'+(technical.projects[rotation].img[0] === "" ? "noImage.jpg" : technical.projects[rotation].img[0])}
+                autoPlay
               />
             </CardActionArea>
             <CardContent>
