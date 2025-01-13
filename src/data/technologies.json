@@ -237,15 +237,6 @@
         "Python",
         "Others"
       ]
-    },
-    {
-      "name":"Unpublish Game",
-      "description":"Hobby game that I develop but never published",
-      "img":["Game.png","Game2.png","Game3.png","Game.MP4"],
-      "technologies":[
-        "Unity",
-        "C#"
-      ]
     }
   ]
 }
