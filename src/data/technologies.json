@@ -232,6 +232,22 @@
       ]
     },
     {
+      "name":"Electric Studio Cypress QA",
+      "description":"Electric Studio  QA automation ",
+      "img":["ElectricStudio-1.png"],
+      "technologies":[
+        "Cypress"
+      ]
+    },
+    {
+      "name":"Metrobank R2 Cypress QA",
+      "description":"Metrobank QA automation",
+      "img":["MetrobankR2.png","MetrobankR2-1.png","MetrobankR2-2.png"],
+      "technologies":[
+        "Cypress"
+      ]
+    },
+    {
       "name":"Hospital App (Partime Programmer)",
       "description":"This app is a portal system to a hospital and keeps the record of the patient.",
       "img":[""],
@@ -258,6 +274,16 @@
       "technologies":[
         "Python",
         "Others"
+      ]
+    },
+    {
+      "name":"Hobby game",
+      "description":"just A hobby game",
+      "img":["Game.png","Game.mp4"],
+      "technologies":[
+        "C#",
+        "Unity",
+        "Krita"
       ]
     }
   ]
