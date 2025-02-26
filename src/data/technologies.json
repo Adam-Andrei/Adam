@@ -88,6 +88,28 @@
   ],
   "projects":[
     {
+      "name":"NMS Loop",
+      "description":"NMS Loop is a chat sytem that assign chats to operators. It's a customer support system",
+      "img":[""],
+      "technologies":[
+        "angular",
+        "mariadb",
+        "redis",
+        "express js ",
+        "laravel"
+      ]
+    },
+    {
+      "name":"NMS client project",
+      "description":"a client project its for advertising people",
+      "img":[""],
+      "technologies":[
+        "vue",
+        "mariadb",
+        "laravel"
+      ]
+    },
+    {
       "name":"NMS Accounts",
       "description":"NMS accounts is an auth system that used by the NMSAPPS platforms",
       "img":["NMSAPPS_Accounts.png"],
