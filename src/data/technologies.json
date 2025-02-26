@@ -2,32 +2,32 @@
   "technology":[
     {
       "name":"Docker",
-      "icon":"https://img.icons8.com/color/48/000000/docker.png",
+      "icon":"https://www.docker.com/app/uploads/2023/08/logo-guide-logos-2.svg",
       "url":"https://docs.docker.com/"
     },
     {
       "name":"Laravel",
-      "icon":"https://img.icons8.com/fluent/48/000000/laravel.png",
+      "icon":"https://www.logo.wine/a/logo/Laravel/Laravel-Logo.wine.svg",
       "url":"https://laravel.com/"
     },
     {
       "name":"Reactjs",
-      "icon":"https://img.icons8.com/plasticine/100/000000/react.png",
+      "icon":"https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
       "url":"https://reactjs.org/"
     },
     {
       "name":"Redis",
-      "icon":"https://img.icons8.com/color/48/000000/redis.png",
+      "icon":"https://redis.io/wp-content/uploads/2024/04/Logotype.svg?auto=webp&quality=85,75&width=120",
       "url":"https://redis.io/"
     },
     {
       "name":"MySql",
-      "icon":"https://img.icons8.com/fluent/48/000000/mysql-logo.png",
+      "icon":"https://www.mysql.com/common/logos/logo-mysql-170x115.png",
       "url":"https://www.mysql.com/"
     },
     {
       "name":"Mariadb",
-      "icon":"https://img.icons8.com/color/48/000000/maria-db.png",
+      "icon":"https://mariadb.com/wp-content/uploads/2019/11/mariadb-logo-vert_blue-transparent-300x245.png",
       "url":"https://mariadb.org/"
     },
     {
