@@ -17,17 +17,17 @@
     },
     {
       "name":"Redis",
-      "icon":"https://redis.io/wp-content/uploads/2024/04/Logotype.svg?auto=webp&quality=85,75&width=120",
+      "icon":"https://static-00.iconduck.com/assets.00/redis-plain-wordmark-icon-512x511-8n4kzl0q.png",
       "url":"https://redis.io/"
     },
     {
       "name":"MySql",
-      "icon":"https://www.mysql.com/common/logos/logo-mysql-170x115.png",
+      "icon":"https://static-00.iconduck.com/assets.00/database-mysql-icon-1954x2048-08uox8qu.png",
       "url":"https://www.mysql.com/"
     },
     {
       "name":"Mariadb",
-      "icon":"https://mariadb.com/wp-content/uploads/2019/11/mariadb-logo-vert_blue-transparent-300x245.png",
+      "icon":"https://static-00.iconduck.com/assets.00/mariadb-icon-2048x1360-e1ki92bu.png",
       "url":"https://mariadb.org/"
     },
     {
